@@ -1,0 +1,24 @@
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#pageback").css("background","url(image/wall/"+$("#themeimg").val()+".jpg) no-repeat top center");
+	$("body").css("background-color",$("#color").val());
+	$("#full-bottom").css("background-color",$("#color").val());
+});
+function go(theme1){
+	 $.ajax({
+          type: "POST",
+          url: 'user!changetheme',
+          cache: false,
+          async: false,
+          data:{
+           	 username:theme1
+          },
+          success: function(data){
+          }
+       });
+	window.location.reload(true);
+}
+</script>
+<input type="hidden" name="themeimg" id="themeimg" value="<s:property value='#session.themeimg'/>"/>
+<input type="hidden" name="color" id="color" value="<s:property value='#session.color'/>"/>
+

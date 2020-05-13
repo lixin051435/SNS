@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.bs.ssh.model.User" table="t_user">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="address"/>
+		<property name="descp" type="text"/>
+		<property name="email"/>
+		<property name="img"/>
+		<property name="password"/>
+		<property name="username"/>
+		<property name="tel" type="int" />
+		<property name="web"/>
+		<list name="friendIds" table="t_friend">
+			<key column="friendId"></key>
+			<list-index column="friendIndex"></list-index>
+			<element type="int" column="friend"></element>
+		</list>
+		
+	</class>
+	
+</hibernate-mapping>

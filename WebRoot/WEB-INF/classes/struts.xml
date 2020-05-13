@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+	<package name="system" namespace="/" extends="struts-default"> 
+		<action name="user" class="userAction">
+			<result name="add_input">/user/add_user.jsp</result>
+			<result name="update_input">/user/update_user_input.jsp</result>
+			<result name="view">/user/user_info.jsp</result>
+			<result name="add_success">/user/add_user_success.jsp</result>
+			<result name="list">/profile.jsp</result>
+			<result name="blog">/blog/list.jsp</result>
+			<result name="loginout">/login.jsp</result>
+			
+
+		</action>
+		<action name="blog" class="blogAction">
+			<result name="add_input">/blog/add.jsp</result>
+			<result name="update_input">/blog/update_input.jsp</result>
+			<result name="list">/blog/list.jsp</result>
+			<result name="view">/blog/view.jsp</result>
+			<result name="add_success">/blog/add_success.jsp</result>
+		</action>
+		<action name="album" class="albumAction">
+			<result name="success">/album/album.jsp</result>
+		</action>
+		<action name="message" class="messageAction">
+			<result name="blog">/blog/list.jsp</result>
+		</action>
+		<action name="comment" class="commentAction">
+
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,48 @@
+
+
+        <!-- #Menu-->
+        <div class="grid_12 topmenu" style="float: right">
+
+        	<ul id="menu">
+                <li><a href="user!list">首页</a></li>
+                <li><a href="blog!list">日志</a>
+                <ul>
+                	<li><a href="blog/add.jsp">添加日志</a></li>
+                	<li><a href="blog!list?<s:property value='#user.id'/>">浏览日志</a></li>
+                </ul>
+                </li>
+               
+            
+                <li><a href="album!listAll">相册</a>
+                <ul>
+                	<li><a href="album!listAll">查看相册</a></li>
+                </ul>
+                </li>
+				 <li><a href="user!view"><span>个人信息</span></a>
+                <ul>
+                	<li><a href="user!updateInput">编辑个人信息</a>
+                    <ul>
+                    	<li><a href="user!updateInput">修改</a></li>
+                    </ul>
+                    </li>
+                    
+                    <li><a href="user!view">查看个人信息</a></li>
+                </ul>
+                <li><a href="#">系统管理</a>
+                <ul>
+                    <li><a href="#">切换主题</a>
+                    <ul>
+                    <li><a href="javascript:go('01')" >默认风格</a></li>
+                    <li><a href="javascript:go('red')" >红色风格</a></li>
+                    <li><a href="javascript:go('purple')">紫色风格</a></li>
+                    <li><a href="javascript:go('green')">绿色风格</a></li>
+                    </li>
+                    </ul>
+                    <li><a href="user!loginout">退出</a></li>
+                </ul>
+                </li>
+                <li><a href="contact.jsp">联系我们</a></li>
+            </ul>
+        </div>        
+   
+    

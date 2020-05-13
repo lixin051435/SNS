@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.bs.ssh.model.Album" table="t_album">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="name"/>
+		<many-to-one name="user" column="user_id"></many-to-one>
+		<list name="photos" table="t_photo">
+			<key column="albumId"></key>
+			<list-index column="photoIndex"></list-index>
+			<element type="string" column="photo"></element>
+		</list>
+	</class>
+	
+</hibernate-mapping>
